@@ -154,7 +154,7 @@ button {
   cursor: pointer;
 }
 
-input {
+input ,textarea {
   outline: none;
 }
 
@@ -690,15 +690,19 @@ input {
 }
 
 .subscribe__form {
-  background-color: var(--input-color);
+  background-color: transparent;
   padding: .5rem;
   display: flex;
+  gap: 1rem;
+  flex-direction: column;
   justify-content: space-between;
+  align-items: center;
 }
 
 .subscribe__input {
-  width: 70%;
-  padding-right: .5rem;
+  width: 100%;
+  padding:0.5 rem ;
+  height: 3rem;
   background-color: var(--input-color);
   color: var(--text-color);
 }

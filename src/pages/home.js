@@ -1,34 +1,15 @@
 import React from "react";
-import homeimg from "../assets/img/abhome3.jpg";
 import abtimg from "../assets/img/blog (1).jpg";
 import abtimg2 from "../assets/img/blog (3).jpg";
 
 import Profilecard from "../components/profilecard";
 import Sponsors from "../components/sponsors";
 import Articles from "../components/Articles";
+import HomeSection from "../components/HomeSection";
 function Homepage() {
   return (
     <div className="main">
-      <section className="home" id="home">
-        <img src={homeimg} alt="" className="home__img" />
-
-        <div className="home__container container grid">
-          <div className="home__data">
-            <span className="home__data-subtitle">We offer</span>
-            <h1 className="home__data-title">
-              Mental <br />
-              Health
-              <b>
-                Care To <br />
-                Individuals In Need
-              </b>
-            </h1>
-            <a href="#" className="button">
-              Explore
-            </a>
-          </div>
-        </div>
-      </section>
+      <HomeSection></HomeSection>
 
       <section className="about section" id="about">
         <div className="about__container container grid">
@@ -91,17 +72,28 @@ function Homepage() {
         <div className="subscribe__bg">
           <div className="subscribe__container container">
             <h2 className="section__title subscribe__title">
-             We Would Like to hear from you<br></br>Contact us
+              We Would Like to hear from you<br></br>Contact us
             </h2>
-            
+
             <form action="" className="subscribe__form">
               <input
-                type="text"
+                type="nuimber"
+                placeholder="Phone Number"
+                className="subscribe__input"
+              />
+              <input
+                type="email"
                 placeholder="Enter email"
                 className="subscribe__input"
               />
 
-              <button className="button">Subscribe</button>
+              <textarea
+                type="text"
+                placeholder="Type Message"
+                className="subscribe__input"
+              />
+
+              <button className="button">Send Message</button>
             </form>
           </div>
         </div>
