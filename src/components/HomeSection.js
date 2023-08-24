@@ -18,7 +18,7 @@ function HomeSection() {
             </b>
           </h1>
           <a href="#" className="button">
-            Explore
+            Services
           </a>
         </div>
       </div>
