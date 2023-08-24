@@ -4,7 +4,6 @@ function Articles() {
   return (
     <section className="place section" id="place">
       <h2 className="section__title"><u>Read</u> Our Articles</h2>
-
       <div className="place__container container grid">
         <div className="place__card">
           <img src={articleimg} alt="" className="place__img" />
@@ -112,7 +111,10 @@ function Articles() {
             <i className="ri-arrow-right-line"></i>
           </button>
         </div>
+
       </div>
+      <button class="outlined-button ">Read All Articles</button>
+
     </section>
   );
 }

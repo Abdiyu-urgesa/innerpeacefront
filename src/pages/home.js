@@ -6,6 +6,7 @@ import Profilecard from "../components/profilecard";
 import Sponsors from "../components/sponsors";
 import Articles from "../components/Articles";
 import HomeSection from "../components/HomeSection";
+import HappyClients from "../components/HappyClients";
 function Homepage() {
   return (
     <div className="main">
@@ -25,7 +26,7 @@ function Homepage() {
               its importance in life. Our organization's main objective is to
               aid people in uncovering inner peace
             </p>
-            <button class="outlined-button">Contact Counselor</button>
+            <button class="outlined-button">Read More</button>
           </div>
 
           <div className="about__img">
@@ -67,6 +68,8 @@ function Homepage() {
       </section>
       <Sponsors></Sponsors>
       <Articles></Articles>
+      <HappyClients></HappyClients>
+
 
       <section className="subscribe section">
         <div className="subscribe__bg">
@@ -90,7 +93,7 @@ function Homepage() {
               <textarea
                 type="text"
                 placeholder="Type Message"
-                className="subscribe__input"
+                className="subscribe__textarea"
               />
 
               <button className="button">Send Message</button>

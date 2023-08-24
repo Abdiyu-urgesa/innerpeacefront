@@ -144,7 +144,7 @@ video {
 }
 
 button,
-input {
+input ,textarea {
   border: none;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
@@ -600,7 +600,13 @@ input ,textarea {
 .place__card, .place__img {
   height: 230px;
 }
-
+.place{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+}
 .place__container {
   grid-template-columns: repeat(2, max-content);
   justify-content: center;
@@ -673,7 +679,45 @@ input ,textarea {
   padding: .75rem 1rem;
 }
 
+/*=============== happy clients ===============*/
+.comment__container{
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: center;
+  align-items: center;
+}
+.comment__content{
+  border: 3px solid var(--text-color) ;
+  padding: var(--mb-1);
+  max-width: 350px;
+  max-height: 500px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.comment__img{
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  margin-top: var(--mb-0-75);
+}
+.content__discription{
+  text-align: center;
+}
+.commenter{
+
+}
+.commernter_title{
+  font-size: var(--smaller-font-size);
+
+}
 /*=============== SUBSCRIBE ===============*/
+
+
+
 .subscribe__bg {
   background-color: var(--first-color-second);
   padding: 2.5rem 0;
@@ -706,8 +750,14 @@ input ,textarea {
   background-color: var(--input-color);
   color: var(--text-color);
 }
-
-.subscribe__input::placeholder {
+.subscribe__textarea{
+  width: 100%;
+  padding:0.5 rem ;
+  height: 6rem;
+  background-color: var(--input-color);
+  color: var(--text-color);
+}
+.subscribe__textarea::placeholder,.subscribe__input::placeholder {
   color: var(--text-color);
 }
 
@@ -871,7 +921,7 @@ input ,textarea {
     justify-content: center;
   }
   .place__container {
-    grid-template-columns: repeat(auto-fit,minmax(120px, 1fr ));
+    grid-template-columns: repeat(auto-fit,minmax(150px, 1fr ));
 
   }
   .subscribe__form {
