@@ -1,7 +1,7 @@
 import React from "react";
 import abtimg from "../assets/img/blog (1).jpg";
 import abtimg2 from "../assets/img/blog (3).jpg";
-
+import { Link } from "react-router-dom";
 import Profilecard from "../components/profilecard";
 import Sponsors from "../components/sponsors";
 import Articles from "../components/Articles";
@@ -26,9 +26,8 @@ function Homepage() {
               its importance in life. Our organization's main objective is to
               aid people in uncovering inner peace
             </p>
-            <button class="outlined-button">Read More</button>
+            <Link to="/about"><button  class="outlined-button">Read More</button></Link>
           </div>
-
           <div className="about__img">
             <div className="about__img-overlay">
               <img src={abtimg} alt="" className="about__img-one" />
@@ -53,7 +52,7 @@ function Homepage() {
               aid people in uncovering inner peace
             </p>
 
-            <button class="outlined-button">All Team Members</button>
+            <Link to="/teams"><button class="outlined-button">All Team Members</button></Link>
           </div>
 
           <div className="teams">

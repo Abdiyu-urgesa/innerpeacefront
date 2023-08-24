@@ -12,16 +12,17 @@
 
   /* HSL color mode */
   --first-color: hsl(23, 97%, 46%);
-  --first-color-second: hsl(var(--hue-color), 64%, 22%);
   --first-color-alt: hsl(var(--hue-color), 64%, 15%);
-  --title-color: hsl(var(--hue-color), 64%, 18%);
-  --text-color: hsl(var(--hue-color), 24%, 35%);
   --text-color-light: hsl(var(--hue-color), 8%, 60%);
-  --input-color: hsl(var(--hue-color), 24%, 97%);
-  --body-color: hsl(var(--hue-color), 100%, 99%);
   --white-color: #FFF;
-  --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
-  --scroll-thumb-color: hsl(var(--hue-color), 12%, 75%);
+
+  --first-color-second: hsl(var(--hue-color), 54%, 12%);
+  --title-color: hsl(var(--hue-color), 24%, 95%);
+  --text-color: hsl(var(--hue-color), 8%, 75%);
+  --input-color: hsl(var(--hue-color), 29%, 16%);
+  --body-color: hsl(var(--hue-color), 29%, 12%);
+  --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
+  --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
 
   /*========== Font and typography ==========*/
   --body-font: 'Open Sans', sans-serif;
@@ -72,13 +73,14 @@
 
 /*========== Variables Dark theme ==========*/
 body.dark-theme {
-  --first-color-second: hsl(var(--hue-color), 54%, 12%);
-  --title-color: hsl(var(--hue-color), 24%, 95%);
-  --text-color: hsl(var(--hue-color), 8%, 75%);
-  --input-color: hsl(var(--hue-color), 29%, 16%);
-  --body-color: hsl(var(--hue-color), 29%, 12%);
-  --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
-  --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
+  --first-color: hsl(23, 97%, 46%);
+  --first-color-second: hsl(var(--hue-color), 64%, 22%);
+  --title-color: hsl(var(--hue-color), 64%, 18%);
+  --text-color: hsl(var(--hue-color), 24%, 35%);
+  --input-color: hsl(var(--hue-color), 24%, 97%);
+  --body-color: hsl(var(--hue-color), 100%, 99%);
+  --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
+  --scroll-thumb-color: hsl(var(--hue-color), 12%, 75%);
 }
 
 /*========== Button Dark/Light ==========*/
@@ -134,6 +136,11 @@ ul {
 }
 
 a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
   text-decoration: none;
 }
 
@@ -571,30 +578,6 @@ input ,textarea {
   right: 0;
 }
 
-/*=============== VIDEO ===============*/
-.video__container {
-  padding-bottom: 1rem;
-}
-
-.video__description {
-  text-align: center;
-  margin-bottom: var(--mb-2-5);
-}
-
-.video__content {
-  position: relative;
-}
-
-.video__button {
-  position: absolute;
-  right: 1rem;
-  bottom: -1rem;
-  padding: 1rem 1.5rem;
-}
-
-.video__button-icon {
-  font-size: 1.2rem;
-}
 
 /*=============== PLACES ===============*/
 .place__card, .place__img {
@@ -679,6 +662,45 @@ input ,textarea {
   padding: .75rem 1rem;
 }
 
+/*=============== Founder ===============*/
+.founder__container{
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: flex-start;
+  align-items: start;
+}
+.founder__content{
+  padding: var(--mb-1);
+  max-width: 350px;
+  max-height: 500px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-start;
+  align-items: flex-start;
+  text-align: left;
+
+
+}
+.founder__img{
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: var(--mb-0-75);
+}
+.founder_title{
+  font-size: var(--smaller-font-size);
+  color: var(--first-color);
+}
+.founder{
+  color: var(--first-color);
+
+}
+.founder__discription{
+  text-align: left;
+  margin-top: var(--mb-0-75);
+
+}
 /*=============== happy clients ===============*/
 .comment__container{
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -707,9 +729,7 @@ input ,textarea {
 .content__discription{
   text-align: center;
 }
-.commenter{
 
-}
 .commernter_title{
   font-size: var(--smaller-font-size);
 

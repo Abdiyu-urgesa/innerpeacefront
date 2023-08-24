@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect } from "react";
 import logoimg from "../assets/img/logo.png";
-
+import { Link } from "react-router-dom";
 function Headernav() {
   useEffect(() => {
     const handleNavToggleClick = () => {
@@ -10,21 +10,21 @@ function Headernav() {
         navMenu.classList.add('show-menu');
       }
     };
-
+  
     const handleNavCloseClick = () => {
       const navMenu = document.getElementById('nav-menu');
       if (navMenu) {
         navMenu.classList.remove('show-menu');
       }
     };
-
+  
     const handleLinkClick = () => {
       const navMenu = document.getElementById('nav-menu');
       if (navMenu) {
         navMenu.classList.remove('show-menu');
       }
     };
-
+  
     const handleScroll = () => {
       const header = document.getElementById('header');
       if (header) {
@@ -35,7 +35,7 @@ function Headernav() {
         }
       }
     };
-
+  
     const handleThemeButtonClick = () => {
       const body = document.body;
       const themeButton = document.getElementById('theme-button');
@@ -43,11 +43,19 @@ function Headernav() {
         body.classList.toggle('dark-theme');
         themeButton.classList.toggle('ri-sun-line');
         themeButton.classList.toggle('ri-moon-line');
+        console.log(body.classList.contains('dark-theme') ? 'dark' : 'light')
         localStorage.setItem('selected-theme', body.classList.contains('dark-theme') ? 'dark' : 'light');
         localStorage.setItem('selected-icon', themeButton.classList.contains('ri-moon-line') ? 'ri-moon-line' : 'ri-sun-line');
       }
     };
-
+  
+    const defaultTheme = localStorage.getItem('selected-theme');
+    console.log(defaultTheme)
+    if (defaultTheme === 'light') {
+      console.log("meme")
+      handleThemeButtonClick();
+    }
+  
     document.getElementById('nav-toggle')?.addEventListener('click', handleNavToggleClick);
     document.getElementById('nav-close')?.addEventListener('click', handleNavCloseClick);
     document.querySelectorAll('.nav__link')?.forEach((link) => {
@@ -55,7 +63,7 @@ function Headernav() {
     });
     window.addEventListener('scroll', handleScroll);
     document.getElementById('theme-button')?.addEventListener('click', handleThemeButtonClick);
-
+  
     return () => {
       document.getElementById('nav-toggle')?.removeEventListener('click', handleNavToggleClick);
       document.getElementById('nav-close')?.removeEventListener('click', handleNavCloseClick);
@@ -85,24 +93,24 @@ function Headernav() {
         <div className="nav__menu" id="nav-menu">
           <ul className="nav__list">
             <li className="nav__item">
-              <a href="#home" className="nav__link ">
+              <Link to="/" className="nav__link ">
                 Home
-              </a>
+              </Link>
             </li>
             <li className="nav__item">
-              <a href="#about" className="nav__link">
+              <Link to="/about" className="nav__link">
                 About
-              </a>
+              </Link>
             </li>
             <li className="nav__item">
-              <a href="#discover" className="nav__link">
+              <Link to="/teams" className="nav__link">
                 Teams
-              </a>
+              </Link>
             </li>
             <li className="nav__item">
-              <a href="#place" className="nav__link">
-                Blogs
-              </a>
+              <Link to="#place" className="nav__link">
+                Articles
+              </Link>
             </li>
           </ul>
 
